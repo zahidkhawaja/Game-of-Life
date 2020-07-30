@@ -11,7 +11,7 @@ function Cell({ condition, coord, dispatch, count, setCount }) {
       setCount(count + 1);
   }
 
-  return <div onClick={handleDispatch} className={`cell ${condition}`} />;
+  return <div onClick={handleDispatch} className={`cell ${condition}`}/>
 }
 
 export default memo(Cell, (prev, next) => {

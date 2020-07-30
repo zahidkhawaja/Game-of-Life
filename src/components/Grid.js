@@ -30,6 +30,7 @@ function Grid() {
 
   const size = 25;
   const [count, setCount] = useState(0);
+  const [speed, setSpeed] = useState(200);
   const [state, dispatch] = useReducer(reducer, {
     gridData: createGrid(size),
     running: false
@@ -61,7 +62,7 @@ function Grid() {
         <div className="grid-buttons">
           <NextGen className="btn" state={state} dispatch={dispatch} count = {count} setCount = {setCount} />
           {state.running ? (
-            <Run dispatch={dispatch} gridData={state.gridData} count = {count} setCount = {setCount} />
+            <Run dispatch={dispatch} gridData={state.gridData} count = {count} setCount = {setCount} speed = {speed} setSpeed = {setSpeed} />
           ) : (
             <button
               onClick={() => dispatch({ type: "running" })}
@@ -77,6 +78,10 @@ function Grid() {
           }>
             Start Over
           </button>
+        </div>
+        <div className = "speed">
+        <button className = "btn" onClick = {() => setSpeed(speed - 100)}>Increase Speed</button>
+          <button className = "btn" onClick = {() => setSpeed(speed + 100)}>Decrease Speed</button>
         </div>
       </div>
     </div>

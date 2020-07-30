@@ -21,6 +21,12 @@ h1 {
   text-align: center;
 }
 
+.speed {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+}
+
 .aboutcontainer {
   width: 100%;
 }
