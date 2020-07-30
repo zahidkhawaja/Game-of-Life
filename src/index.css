@@ -21,6 +21,24 @@ h1 {
   text-align: center;
 }
 
+.aboutcontainer {
+  width: 100%;
+}
+
+.about, .grid {
+  margin: 150px;
+}
+
+.primary {
+  display: flex;
+  margin: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;

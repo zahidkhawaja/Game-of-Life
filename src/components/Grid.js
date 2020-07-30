@@ -42,7 +42,7 @@ function Grid() {
   return (
     <div>
         <div className = "count">
-                <h3>Current generation: {count}</h3>
+                <h4>Current generation: {count}</h4>
             </div>
       <div className="grid">
         {state.gridData.map(
