@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from "react";
+import React, { memo } from "react";
 import { string, array, func } from "prop-types";
 
 function Cell({ condition, coord, dispatch, count, setCount }) {
@@ -7,7 +7,7 @@ function Cell({ condition, coord, dispatch, count, setCount }) {
     dispatch({ type: "fill", payload: coord });
   };
 
-  if(condition == "dead") {
+  if(condition === "dead") {
       setCount(count + 1);
   }
 

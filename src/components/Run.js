@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { determineLife } from "../utils/gamelogic";
 
 function Run({ dispatch, gridData, speed, setSpeed }) {
