@@ -30,7 +30,7 @@ function Grid() {
 
   const size = 25;
   const [count, setCount] = useState(0);
-  const [speed, setSpeed] = useState(200);
+  const [speed, setSpeed] = useState(300);
   const [state, dispatch] = useReducer(reducer, {
     gridData: createGrid(size),
     running: false
@@ -80,8 +80,8 @@ function Grid() {
           </button>
         </div>
         <div className = "speed">
-        <button className = "btn" onClick = {() => setSpeed(speed - 100)}>Increase Speed</button>
-          <button className = "btn" onClick = {() => setSpeed(speed + 100)}>Decrease Speed</button>
+        <button className = "btn" onClick = {() => setSpeed(speed / 2)}>Increase Speed</button>
+          <button className = "btn" onClick = {() => setSpeed(speed * 2)}>Decrease Speed</button>
         </div>
       </div>
     </div>
